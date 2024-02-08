@@ -59,7 +59,7 @@ const Header = () => {
               <motion.span 
               initial={{ rotateZ: 0, y: 0 }} animate={{ 
                 rotateZ: isMenu ? '-45deg' : 0,
-                y: isMenu ? 11 : 0
+                y: isMenu ? 10 : 0
               }}/>
 
               <motion.span 
@@ -69,7 +69,7 @@ const Header = () => {
               <motion.span 
               initial={{ rotateZ: 0, y: 0 }} animate={{ 
                 rotateZ: isMenu ? '45deg' : 0,
-                y: isMenu ? -11 : 0
+                y: isMenu ? -10 : 0
               }}/>
 
             </div>
