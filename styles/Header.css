@@ -71,7 +71,6 @@
             color: var(--mainColor);
         }
     }
-
     
     .mobileHeader{
         width: 30px;
@@ -112,9 +111,7 @@
                 li{
                     width: 100%;
                     padding: 12px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
+                    text-align: center;
         
                     label{
                         margin-right: 16px;

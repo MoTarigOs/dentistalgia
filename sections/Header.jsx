@@ -13,10 +13,11 @@ import Svgs from "@utils/Svgs";
 const Header = () => {
   
   const { 
-    isArabic, setIsArabic, selectedRouter, setSelectedRouter,
+    isArabic, setIsArabic, selectedRouter,
     isMenu, setIsMenu, isMobile, setIsMobile
   } = useContext(Context);
   const [isLang, setIsLang] = useState(false);
+  const langs = ['English', 'العربية', 'Español', 'Français', 'Deutsch', '中文', 'Русский', '日本語', 'Türkçe'];
 
   useEffect(() => {
 
@@ -95,11 +96,10 @@ const Header = () => {
                 ))}
 
                 <li>
-                  <select onChange={(e) => setIsArabic(e.target.value === 'en' ? false : true)}
-                  value={isArabic ? 'ar' : 'en'}
-                  >
-                    <option value="en" style={{ textAlign: 'left' }}>Engllish</option>
-                    <option value="ar">العربية</option>
+                  <select>
+                    {langs.map((lang) => (
+                      <option value={lang}>{lang}</option>
+                    ))}
                   </select>
                 </li>
 
@@ -130,7 +130,7 @@ const Header = () => {
             >
               <button>Language <Svgs name={'arrow'}/></button>
               {isLang && <ul className="languages">
-                {['English', 'العربية', 'Español', 'Français', 'Deutsch', '中文', 'Русский', '日本語', 'Türkçe'].map((lang) => (
+                {langs.map((lang) => (
                   <li key={lang} style={{ opacity: lang === 'English' && 1 }}>
                     {lang}
                   </li>
