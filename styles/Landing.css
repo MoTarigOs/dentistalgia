@@ -116,7 +116,7 @@
         .bottomLanding{
 
             .landing_services_div{
-                
+                margin-bottom: var(--mobileHeaderHeight);
             }
 
             .landingImage{

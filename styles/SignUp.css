@@ -95,8 +95,8 @@
 
 @media screen and (max-width: 480px){
     .SignUp{
-        align-items: start;
         min-height: unset;
+        padding-top: 64px;
 
         .formDiv{
             padding: 12px;
