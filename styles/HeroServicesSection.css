@@ -28,15 +28,16 @@
         }
     }
 
-    button{
+    a{
         background: transparent;
         border: none;
         color: var(--mainColor);
         font-size: 1.2rem;
         cursor: pointer;
+        text-decoration: none;
     }
 
-    button:hover{
+    a:hover{
         text-decoration: underline;
     }
 }

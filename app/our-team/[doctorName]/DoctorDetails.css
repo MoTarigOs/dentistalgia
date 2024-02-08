@@ -96,6 +96,7 @@
 
 @media screen and (max-width: 480px){
     .DoctorDetails{
+        padding-top: 34px;
 
         .landingDoctorDetails{
 

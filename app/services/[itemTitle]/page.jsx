@@ -22,6 +22,8 @@ const page = ({ params }) => {
 
         const fetchedItem = getServiceDetails(itemTitle);
 
+        if(!fetchedItem) return;
+
         setItem(fetchedItem);
 
         const t = fetchedItem.treatmentOptions.replaceAll(', ', '-').split('-');

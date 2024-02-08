@@ -108,6 +108,8 @@
 
 @media screen and (max-width: 960px){
     .Details{
+        padding-top: 64px;
+        
         .left{
             h1{
                 font-size: 2rem;
@@ -136,6 +138,7 @@
 @media screen and (max-width: 680px){
     .Details{
         padding-bottom: 48px;
+        padding-top: 58px;
         flex-direction: column;
 
         .left h1{

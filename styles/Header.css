@@ -250,20 +250,6 @@
             transition: all 0.3s ease-in;
         }
 
-        .selected{
-            position: relative;
-
-            &::after{
-                position: absolute;
-                content: '';
-                width: 110%;
-                height: 2px;
-                bottom: -4px;
-                left: -5%;
-                background: var(--mainColor);
-            }
-        }
-
         .lang{
             position: relative;
 
@@ -315,6 +301,20 @@
         left: calc(50% - 50vw);
         z-index: -1;
         background: white;
+    }
+}
+
+.selected{
+    position: relative;
+
+    &::after{
+        position: absolute;
+        content: '';
+        width: 110%;
+        height: 2px;
+        bottom: -4px;
+        left: -5%;
+        background: var(--mainColor);
     }
 }
 

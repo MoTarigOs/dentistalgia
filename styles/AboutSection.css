@@ -22,7 +22,7 @@
             color: rgba(0, 0, 0, 0.318);
         }
         
-        button{
+        a{
             border: 2px solid white;
             background: transparent;
             color: white;
@@ -32,9 +32,10 @@
             cursor: pointer;
             margin-bottom: auto;
             transition: all 0.3s ease-out;
+            text-decoration: none;
         }
 
-        button:hover{
+        a:hover{
             background: white;
             color: var(--mainColor);
             transition: all 0.3s ease-in;

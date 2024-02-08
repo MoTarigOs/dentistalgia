@@ -7,6 +7,7 @@ import { Context } from '@utils/Context';
 import AboutImage from '@assets/images/about_section_image.jpg';
 import Image from 'next/image';
 import { useContext } from 'react';
+import Link from 'next/link';
 
 const AboutSection = () => {
 
@@ -23,7 +24,7 @@ const AboutSection = () => {
             
                 <p>At Dentistalgia, we offer comprehensive dental solutions designed to meet the unique needs of your family. From routine check-ups to advanced treatments, our skilled team is committed to ensuring your smiles remain healthy and radiant. With a focus on gentle care and patient satisfaction, we create a welcoming environment where every visit is comfortable and stress-free.</p>
             
-                <button>More About us</button>
+                <Link href={'/about'}>More About us</Link>
 
                 <ul>
 

@@ -3,7 +3,7 @@
     min-height: 100vh;
     display: flex;
     justify-content: space-between;
-    padding: 32px 0;
+    padding: 64px 0 32px 0;
     gap: 32px;
 
     .landing{
@@ -92,6 +92,14 @@
                 color: var(--mainColor);
                 transition: all 0.3s ease-in;
             }
+        }
+    }
+}
+
+@media screen and (max-width: 720px){
+    .book{
+        .landing{
+            display: none;
         }
     }
 }

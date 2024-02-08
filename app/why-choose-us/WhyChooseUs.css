@@ -50,7 +50,7 @@
 
 @media screen and (max-width: 680px){
     .container{
-        padding-top: 32px;
+        padding-top: 64px;
 
         h1{
             font-size: 2rem;
@@ -73,7 +73,6 @@
 
 @media screen and (max-width: 480px){
     .container{
-        padding-top: 32px;
 
         h1{
             font-size: 2rem;

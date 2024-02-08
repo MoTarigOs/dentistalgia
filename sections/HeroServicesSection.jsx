@@ -4,6 +4,7 @@ import ServiceCard from '@components/ServiceCard';
 import '@styles/HeroServicesSection.css';
 import { servicesArray } from '@utils/Constants';
 import { Context } from '@utils/Context';
+import Link from 'next/link';
 import { useContext, useEffect } from 'react';
 
 const HeroServicesSection = () => {
@@ -27,7 +28,7 @@ const HeroServicesSection = () => {
                 ))}
             </ul>
 
-            <button>More Services</button>
+            <Link href={"/services"}>More Services</Link>
 
         </div>
 

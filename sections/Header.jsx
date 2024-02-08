@@ -13,7 +13,7 @@ import Svgs from "@utils/Svgs";
 const Header = () => {
   
   const { 
-    isArabic, setIsArabic, selectedRouter,
+    isArabic, selectedRouter, setSelectedRouter,
     isMenu, setIsMenu, isMobile, setIsMobile
   } = useContext(Context);
   const [isLang, setIsLang] = useState(false);
@@ -94,6 +94,15 @@ const Header = () => {
                     </Link>
                   </li>
                 ))}
+
+                <li><Link href={'/sign-in'} className={selectedRouter === 'Sign In' && 'selected'}
+                  onClick={() => {
+                    setSelectedRouter('Sign In');
+                    setIsMenu(false);
+                  }}
+                >
+                  Login
+                </Link></li>
 
                 <li>
                   <select>
