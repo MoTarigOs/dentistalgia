@@ -74,14 +74,13 @@
 
     
     .mobileHeader{
+        width: 30px;
+        height: 24px;
 
         .menuIconDiv{
             width: 30px;
             height: 24px;
-            display: flex;
-            flex-direction: column;
             cursor: pointer;
-            gap: 8px;
 
             span{
                 width: 100%;

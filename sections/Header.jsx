@@ -7,7 +7,7 @@ import Logo from '@assets/icons/logo.png';
 import '@styles/Header.css';
 import { Context } from "@utils/Context";
 import Link from "next/link";
-import {  motion } from "framer-motion";
+import { motion } from "framer-motion";
 import Svgs from "@utils/Svgs";
 
 const Header = () => {
@@ -56,13 +56,13 @@ const Header = () => {
             
             <div className="menuIconDiv" onClick={() => setIsMenu(!isMenu)}>
 
-              <motion.span 
+              <motion.span style={{ marginBottom: 8 }}
               initial={{ rotateZ: 0, y: 0 }} animate={{ 
                 rotateZ: isMenu ? '-45deg' : 0,
                 y: isMenu ? 10 : 0
               }}/>
 
-              <motion.span 
+              <motion.span style={{ marginBottom: 8 }}
               initial={{ opacity: 1 }} 
               animate={{ opacity: isMenu ? 0 : 1 }}/>
 
@@ -85,8 +85,10 @@ const Header = () => {
 
                 {['Home', 'Why choose us', 'Services', 'Our team', 'About'].map((item) => (
                   <li key={item}>
-                    <Link href={`/${item === 'Home' ? '' : item.toLowerCase()}`}
-                    className={selectedRouter === item ? 'selected' : null}>
+                    <Link href={`/${item === 'Home' ? '' : item.replaceAll(' ', '-').toLowerCase()}`}
+                      className={selectedRouter === item ? 'selected' : null}
+                      onClick={() => setIsMenu(false)}
+                    >
                       {getConstName(item, isArabic)}
                     </Link>
                   </li>
