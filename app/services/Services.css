@@ -1,0 +1,108 @@
+.Services{
+    width: 100%;
+    position: relative;
+    padding-bottom: 64px;
+
+    .ServicesLanding{
+        width: 100%;
+        height: 258px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 12px;
+
+        h1{
+            color: white;
+            margin-top: -48px;
+            font-size: 3rem;
+        }
+
+        p{
+            color: rgb(88, 88, 88);
+        }
+
+        &::before{
+            position: absolute;
+            content: '';
+            width: 100vw;
+            height: 100%;
+            top: 0;
+            left: calc(50% - 50vw);
+            background: var(--mainColor);
+            z-index: -1;
+        }
+
+        &::after{
+            position: absolute;
+            content: '';
+            width: 100vw;
+            height: 20%;
+            bottom: -2px;
+            left: calc(50% - 50vw);
+            background: white;
+            z-index: -1;
+            border-top-left-radius: 100%;
+            border-top-right-radius: 100%;
+        }
+    }
+
+    #servicesWord{
+        width: 100%;
+        margin-bottom: 48px;
+        text-align: center;
+        background: -webkit-linear-gradient(var(--mainColor), #6dc2de);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    ul{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+}
+
+
+@media screen and (max-width: 680px){
+    .Services{
+
+        .ServicesLanding{
+
+            h1{
+                font-size: 2rem;
+            }
+
+            p{
+                font-size: 0.96rem;
+            }
+        }
+
+        ul{
+            justify-content: center;
+        }
+    }
+}
+
+@media screen and (max-width: 480px){
+    .Services{
+
+        .ServicesLanding{
+
+            h1{
+                font-size: 1.6rem;
+            }
+
+            p{
+                font-size: 0.88rem;
+            }
+        }
+
+        ul .ServicePageCard{  
+            overflow: hidden;
+            width: 100%;
+            max-width: 305px;
+        }
+    }
+}

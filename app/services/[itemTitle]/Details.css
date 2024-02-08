@@ -1,0 +1,149 @@
+.Details{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 0;
+    gap: 32px;
+
+    .left{
+        width: 100%;
+        max-width: 680px;
+        display: flex;
+        flex-direction: column;
+
+        h1{
+            font-size: 2.5rem;
+            margin-bottom: 16px;                
+            background: -webkit-linear-gradient(var(--mainColor), #6dc2de);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        img{
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin-bottom: 32px;
+            box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.219);
+        }
+
+        label{
+            font-size: 1.1rem;
+            margin-bottom: 4px;
+            color: rgb(64, 64, 64);
+        }
+
+        p{
+            color: rgba(73, 73, 73, 0.629);
+            margin-bottom: 16px;
+        }
+    }
+
+    .right{
+        width: 100%;
+        max-width: 360px;
+        display: flex;
+        flex-direction: column;
+
+        .cost{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+            h2{
+                font-size: 2.5rem;
+                color: rgba(48, 48, 48, 0.578);
+            }
+
+            strong{
+                font-size: 2rem;
+                color: rgba(48, 48, 48, 0.578);
+            }
+        }
+
+        h3{
+            font-size: 1.3rem;
+            margin-bottom: 16px;
+            background: var(--mainColor);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        label{
+            color: rgba(7, 7, 7, 0.805);
+            margin-bottom: 4px;
+        }
+
+        select{
+            padding: 8px;
+            border-radius: 4px;
+            margin-bottom: 12px;
+            font-size: 1.2rem;
+            outline: none;
+        }
+
+        input{
+            padding: 8px;
+            margin-bottom: 16px;
+        }
+
+        button{
+            padding: 8px;
+            border: none;
+            background: var(--mainColor);
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    }
+
+    hr{
+        margin-top: 16px;
+        margin-bottom: 24px;
+        border-color: rgba(0, 0, 0, 0.125);
+    }
+}
+
+
+@media screen and (max-width: 960px){
+    .Details{
+        .left{
+            h1{
+                font-size: 2rem;
+            }
+        }
+
+        .right{
+            .cost{
+                h2{
+                    font-size: 2rem;
+                }
+
+                strong{
+                    font-size: 1.8rem;
+                }
+            }
+        }
+
+        hr{
+            margin-top: 12px;
+            margin-bottom: 16px;
+        }
+    }
+}
+
+@media screen and (max-width: 680px){
+    .Details{
+        padding-bottom: 48px;
+        flex-direction: column;
+
+        .left h1{
+            font-size: 1.8rem;
+        }
+
+        .right{
+            max-width: unset;
+        }
+    }
+}

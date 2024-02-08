@@ -1,0 +1,139 @@
+.card{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 300px;
+    gap: 32px;
+
+    .texts{
+        max-width: 60%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 0;
+
+        h2{
+            font-size: 2.5rem;
+            line-height: 40px;
+            color: var(--mainColor);
+        }
+
+        p{
+            color: grey;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+        
+        .buttons{
+            width: 100%;
+            display: flex;
+
+            a{
+                padding: 12px 24px;
+                border: none;
+                background: var(--mainColor);
+                color: white;
+                border-radius: 4px;
+                font-size: 1rem;
+                cursor: pointer;
+                transition: all 0.3s ease-out;
+                white-space: nowrap;
+                text-decoration: none;
+            }
+
+            a:hover{
+                background: var(--hoverColor);
+                transition: all 0.3s ease-in;
+            }
+
+            #book{
+                background: transparent;
+                color: var(--mainColor);
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                transition: all 0.3s ease-out;
+
+                svg{
+                    width: 12px;
+                    height: 12px;
+                    transform: rotateZ(90deg);
+
+                    path{
+                        fill: var(--mainColor);
+                    }
+                }
+            }
+            
+            #book:hover{
+                color: var(--hoverColor);
+                transition: all 0.3s ease-in;
+            }
+        }
+    }
+
+    .vector{
+        width: 100%;
+        height: 100%;
+        background: var(--mainColor);
+        border-radius: 12px;
+        overflow: hidden;
+
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+}
+
+
+@media screen and (max-width: 960px){
+    .card{
+
+        .texts{
+            gap: 12px;
+
+            h2{
+                font-size: 2rem;
+                line-height: 24px;
+            }
+
+            p{
+                font-size: 0.96rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 680px){
+    .card{
+        gap: 12px;
+
+        .texts{
+
+            h2{
+                font-size: 1.5rem;
+                line-height: 24px;
+            }
+
+            p{
+                font-size: 0.9rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px){
+    .card{
+        
+        .texts{
+            max-width: unset;
+        }
+
+        .vector{
+            display: none;
+        }
+    }
+}

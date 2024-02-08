@@ -1,0 +1,120 @@
+.aboutSection{
+    width: 100%;
+    height: fit-content;
+    position: relative;
+    padding-top: 15%;
+    padding-bottom: 64px;
+    display: flex;
+    gap: 32px;
+
+    .texts{
+        width: 100%;
+        max-width: 680px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        h2{
+            color: white;
+        }
+
+        p{
+            color: rgba(0, 0, 0, 0.318);
+        }
+        
+        button{
+            border: 2px solid white;
+            background: transparent;
+            color: white;
+            width: fit-content;
+            padding: 12px 24px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-bottom: auto;
+            transition: all 0.3s ease-out;
+        }
+
+        button:hover{
+            background: white;
+            color: var(--mainColor);
+            transition: all 0.3s ease-in;
+        }
+
+        ul{
+            margin-top: 64px;
+            width: 100%;
+            display: flex;
+            gap: 16px;
+            list-style: none;
+
+            .ServiceCard{
+                max-width: 196px;
+                padding: 16px 24px;
+                background: white;
+                border-radius: 12px;
+
+                a {
+                    text-decoration: none;
+
+                    h2{
+                        color: var(--mainColor);
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .picture{
+        width: 100%;
+        max-width: 320px;
+        border-radius: 12px;
+        overflow: hidden;
+
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &::after{
+        position: absolute;
+        content: '';
+        width: 100vw;
+        height: 90%;
+        top: 10%;
+        left: calc(50% - 50vw);
+        background: var(--mainColor);
+        border-top-right-radius: 50%;
+        z-index: -1;
+    }
+}
+
+
+@media screen and (max-width: 780px){
+    .aboutSection{
+        padding: 32px 0 64px 0;
+        margin-top: 64px;
+
+        .texts{
+
+            ul{
+                margin-top: 32px;
+                height: 100%;
+                flex-wrap: wrap;
+            }
+        }
+
+        .picture{
+            display: none;
+        }
+
+        &::after{
+            border-radius: 0;
+            top: 0;
+            height: 100%;
+        }
+    }
+
+}

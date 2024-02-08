@@ -1,0 +1,80 @@
+.doctorCard{
+    width: 298px;
+    height: 420px;
+    position: relative;
+    box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.218);
+    border-radius: 8px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s ease-in;
+
+    a{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-decoration: none;
+    }
+
+    .pic{
+        height: 340px;
+        width: 100%;
+
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .details{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 16px;
+        background: var(--mainColor);
+        gap: 8px;
+        color: white;
+    }
+
+    .profile{
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        padding: 8px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        background: var(--mainColor);
+        border-radius: 4px;
+        color: white;
+        transition: all 0.3s ease-out;
+
+        svg path{
+            stroke: white;
+        }
+
+        &:hover{
+            background: var(--hoverColor);
+            transition: all 0.3s ease-in;
+        }
+    }
+
+    &:hover{
+        box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.463);
+        transition: all 0.3s ease-in;
+    }
+
+    &::before{
+        position: absolute;
+        content: '';
+        width: 200px;
+        height: 200px;
+        top: calc(40% - 100px);
+        left: calc(50% - 100px);
+        border-radius: 50%;
+        z-index: -1;
+        background: var(--mainColor);
+    }
+}

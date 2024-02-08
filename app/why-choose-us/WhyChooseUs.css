@@ -1,0 +1,98 @@
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 128px;
+    padding-bottom: 64px;
+
+    h1{
+        margin-bottom: 32px;
+        font-size: 3rem;
+        word-break: keep-all;
+    }
+
+    .reasons{
+        width: fit-content;
+        display: flex;
+        gap: 32px;
+        list-style: none;
+
+        a{
+            text-decoration: none;
+            color: rgb(92, 92, 92);
+        }
+
+        .ServiceCard{
+            padding: 16px;
+
+            svg{
+                display: none;
+            }
+        }
+    }
+
+    hr{
+        background: var(--mainColor);
+        width: 100%;
+        height: 2px;
+        border: none;
+        margin: 64px 0;
+    }
+
+    .cards{
+        display: flex;
+        flex-direction: column;
+        gap: 128px;
+    }
+}
+
+
+@media screen and (max-width: 680px){
+    .container{
+        padding-top: 32px;
+
+        h1{
+            font-size: 2rem;
+        }
+
+        .reasons{
+            flex-direction: column;
+            
+            .ServiceCard{
+                padding: 32px;
+                max-width: 320px;
+            }
+        }
+
+        .cards{
+            gap: 64px;
+        }
+    }
+}
+
+@media screen and (max-width: 480px){
+    .container{
+        padding-top: 32px;
+
+        h1{
+            font-size: 2rem;
+        }
+
+        .reasons{
+            gap: 24px;
+
+            .ServiceCard{
+                padding: 16px;
+            }
+        }
+
+        hr{
+            margin: 32px 0;
+        }
+        
+        .cards{
+            gap: 32px;
+        }
+    }
+}

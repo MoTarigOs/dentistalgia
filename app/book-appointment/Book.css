@@ -1,0 +1,97 @@
+.book{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    padding: 32px 0;
+    gap: 32px;
+
+    .landing{
+        width: 100%;
+        max-width: 320px;
+
+        img{
+            width: 100%;
+            height: 100%;
+            max-height: 720px;
+            object-fit: cover;
+            background: var(--mainColor);
+            border-radius: 8px;
+        }
+    }
+
+    .form{
+        width: 100%;
+        height: 100%;
+
+        h1{
+            text-align: center;
+            font-size: 2.5rem;                
+            background: var(--mainColor);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 32px;
+        }
+    
+        form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            width: 100%;
+            background: var(--mainColor);
+            border-radius: 8px;
+            padding: 32px;
+            margin-bottom: 32px;
+    
+            input{
+                padding: 16px;
+                width: 100%;
+                border: none;
+                background: white;
+                border-radius: 4px;
+                outline: none;
+                font-size: 1.3rem;
+            }
+    
+            select{
+                width: 100%;
+                padding: 16px 12px;
+                font-size: 1.3rem;
+                border: none;
+                border-radius: 4px;
+                color: grey;
+                outline: none;
+            }
+    
+            textarea{
+                width: 100%;
+                padding: 16px;
+                border: none;
+                border-radius: 4px;
+                font-size: 1.3rem;
+                outline: none;
+                resize: none;
+            }
+    
+            button{
+                margin-top: 12px;
+                width: fit-content;
+                padding: 8px 24px;
+                font-size: 1.3rem;
+                color: white;
+                border-radius: 4px;
+                background: transparent;
+                border: 2px solid white;
+                cursor: pointer;
+                transition: all 0.3s ease-out;
+            }
+    
+            button:hover{
+                background: white;
+                color: var(--mainColor);
+                transition: all 0.3s ease-in;
+            }
+        }
+    }
+}
